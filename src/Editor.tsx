@@ -18,9 +18,7 @@ class Editor extends Component
 	}
 
 	componentDidMount() {
-		let editor: monaco.editor.IStandaloneCodeEditor;
-
-		editor = monaco.editor.create(this.myRef.current, {
+		monaco.editor.create(this.myRef.current, {
 			value: ['function x() {', '\tconsole.log("Hello world2!");', '}'].join('\n'),
 			language: 'typescript'
 		});
